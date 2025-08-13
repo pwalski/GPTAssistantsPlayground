@@ -192,6 +192,7 @@ def main_interface():
     )
     parser.add_argument("--show-error", action="store_true", help="Show error messages")
     parser.add_argument("--debug", action="store_true", help="Debug mode")
+    parser.add_argument("--server-name", type=str, default="localhost",)
 
     args = parser.parse_args()
 
@@ -340,7 +341,7 @@ def main_interface():
                     container=True,
                     lines=45,
                 )
-                demo.load(logger.read_logs, None, logs, every=1)
+                demo.load(logger.read_logs, None, logs)
     demo.queue()
     # demo.launch(share=True, inbrowser=True)
     demo.launch(
@@ -348,6 +349,7 @@ def main_interface():
         inbrowser=args.in_browser,
         show_error=args.show_error,
         debug=args.debug,
+        server_name=args.server_name,
     )
 
 
