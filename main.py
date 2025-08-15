@@ -342,7 +342,7 @@ def main_interface():
                     container=True,
                     lines=45,
                 )
-                demo.load(logger.read_logs, None, logs)
+                demo.load(logger.read_logs, None, logs, every=1)
     demo.queue()
     # demo.launch(share=True, inbrowser=True)
     demo.launch(
