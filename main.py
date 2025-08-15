@@ -288,6 +288,7 @@ def main_interface():
                         container=True,
                         avatar_images=["avatar1.png", "avatar2_lite.png"],
                         layout="panel",
+                        type="tuples", # ToDo: legacy, change to "messages"
                     )
                     with gr.Row():
                         with gr.Column(scale=12):
