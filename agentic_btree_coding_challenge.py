@@ -62,7 +62,7 @@ judge_test_cases = textwrap.dedent("""
 hacker = create_assistant_action_on_thread(
     thread=thread,
     action_name="Hacker",
-    assistant_name="Python Coding Assistant",
+    assistant_name="Python_Coding_Assistant",
     assistant_instructions=textwrap.dedent(f"""
     Challenge goal: 
     {challenge}
@@ -74,7 +74,7 @@ root.add_child(hacker)
 judge = create_assistant_action_on_thread(
     thread=thread,
     action_name="Judge solution",
-    assistant_name="Coding Challenge Judge",
+    assistant_name="Coding_Challenge_Judge",
     assistant_instructions=textwrap.dedent(
         f"""
     Challenge goal: 
@@ -92,7 +92,7 @@ root.add_child(judge)
 # verifier operates on a different thread, essentially in closed room
 verifier = create_assistant_condition(
     condition_name="Verify solution",
-    assistant_name="Python Coding Assistant",
+    assistant_name="Python_Coding_Assistant",
     assistant_instructions=textwrap.dedent(
         f"""
     Challenge goal: 
